@@ -1,0 +1,94 @@
+esphome:
+  name: xiaomi-temphum-sensors
+  friendly_name: Xiaomi Temp/Hum Sensors
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "!!removed!!"
+
+ota:
+  password: "!!removed!!"
+  
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Xiaomi-Temphum-Sensors"
+    password: "G12wv5B6yEGn"
+
+captive_portal:
+
+esp32_ble_tracker:
+  
+sensor:
+  - platform: pvvx_mithermometer
+    mac_address: "A4:C1:38:4D:A1:82"
+    temperature:
+      name: "ATC_1 Temperature"
+    humidity:
+      name: "ATC_1 Humidity"
+    battery_level:
+      name: "ATC_1 Battery-Level"
+    battery_voltage:
+      name: "ATC_1 Battery-Voltage"
+    signal_strength:
+      name: "ATC_1 Signal"
+  - platform: pvvx_mithermometer
+    mac_address: "A4:C1:38:7C:AC:2F"
+    temperature:
+      name: "ATC_2 Temperature"
+    humidity:
+      name: "ATC_2 Humidity"
+    battery_level:
+      name: "ATC_2 Battery-Level"
+    battery_voltage:
+      name: "ATC_2 Battery-Voltage"
+    signal_strength:
+      name: "ATC_2 Signal"
+  - platform: pvvx_mithermometer
+    mac_address: "A4:C1:38:D4:DA:0C"
+    temperature:
+      name: "ATC_3 Temperature"
+    humidity:
+      name: "ATC_3 Humidity"
+    battery_level:
+      name: "ATC_3 Battery-Level"
+    battery_voltage:
+      name: "ATC_3 Battery-Voltage"
+    signal_strength:
+      name: "ATC_3 Signal"
+  - platform: pvvx_mithermometer
+    mac_address: "A4:C1:38:57:03:F6"
+    temperature:
+      name: "ATC_4 Temperature"
+    humidity:
+      name: "ATC_4 Humidity"
+    battery_level:
+      name: "ATC_4 Battery-Level"
+    battery_voltage:
+      name: "ATC_4 Battery-Voltage"
+    signal_strength:
+      name: "ATC_4 Signal"
+  - platform: pvvx_mithermometer
+    mac_address: "A4:C1:38:32:1D:F1"
+    temperature:
+      name: "ATC_5 Temperature"
+    humidity:
+      name: "ATC_5 Humidity"
+    battery_level:
+      name: "ATC_5 Battery-Level"
+    battery_voltage:
+      name: "ATC_5 Battery-Voltage"
+    signal_strength:
+      name: "ATC_5 Signal"
