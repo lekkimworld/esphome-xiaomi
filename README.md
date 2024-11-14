@@ -14,3 +14,5 @@ Add the below line to the `secrets.yaml` file in the `esphome` subdirectory of t
 * `wifi_password`
 * `esphome_ota_password`
 * `esphome_api_encryption_key`
+
+Custom firmware flashed with https://pvvx.github.io/ATC_MiThermometer/TelinkMiFlasher.html
